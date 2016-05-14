@@ -12,7 +12,7 @@ router.get('/waitingtimes', function(req, res, next) {
         scheduleMaxDates: 7}
     );
 
-    eupopaparkObject.GetWaitTimes(function(err, data) {
+    eupopaparkObject.GetOpeningTimes(function(err, data) {
         if (err) return console.error("Error fetching Magic Kingdom wait times: " + err);
 
         console.log(JSON.stringify(data, null, 2));
