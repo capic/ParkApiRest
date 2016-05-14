@@ -16,6 +16,7 @@ router.get('/waitingtimes', function(req, res, next) {
         if (err) return console.error("Error fetching Magic Kingdom wait times: " + err);
 
         console.log(JSON.stringify(data, null, 2));
+        res.json(data);
     });
 });
 
